@@ -18,7 +18,7 @@ export default function App() {
             notif.addEventListener("message", event => {
                 let eventData = isValidJSON(event.data)
                 
-                //Error check for 
+                //Error check for valid response from server
                 if(typeof profanity === 'undefined' || profanity.time != eventData.time && eventData != false) {
                     profanity = eventData
                     notifyProfanity(profanity)

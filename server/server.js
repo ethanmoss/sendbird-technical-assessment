@@ -34,6 +34,7 @@ app.post('/sendbird/webhook', (req,res) => {
     return res.sendStatus(200);
 })
 
+// Endpoint to link client to server for server-sent event functionality
 app.get('/notify', (req,res) => {
 
     res.setHeader('Cache-Control', 'no-cache');
